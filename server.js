@@ -6,7 +6,9 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = 3001;
+//const PORT = 3001;下面的代码是部署时加的
+const PORT = process.env.PORT || 3001;
+
 
 app.use(cors());
 app.use(bodyParser.json());
